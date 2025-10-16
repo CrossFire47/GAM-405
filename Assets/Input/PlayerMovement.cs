@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Vector2 moveInput;
 
+
     [SerializeField] private Rigidbody rb;
     void Start()
     {
@@ -37,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.TransformDirection(inputDir) * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + move);
-
     }
 
     void FixedUpdate()
