@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "name": "MenuControl",
+    "maps": [
+        {
+            "name": "MenuCrap",
+            "id": "ebe9a84f-844a-46f1-b29c-ed4b3f0033dc",
+            "actions": [
+                {
+                    "name": "AnyKey",
+                    "type": "Button",
+                    "id": "5059445b-52f9-4d54-b703-223c24197ed6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2a7dba72-638c-427b-8011-93c76dff135d",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Any",
+                    "action": "AnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Any",
+            "bindingGroup": "Any",
+            "devices": []
+        }
+    ]
+}

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Vector2 moveInput;
 
-
+    public bool isActive;
     [SerializeField] private Rigidbody rb;
     void Start()
     {
@@ -44,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleMovement();
     }
+
+    
+    
+
+    
 
 
 }
