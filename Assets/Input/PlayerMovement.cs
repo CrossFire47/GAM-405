@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public InputActionReference moveAction;
+    public InputActionReference interactAction;
+
+    public GameObject hands;
 
     public float moveSpeed = 5f;
 
@@ -24,11 +27,40 @@ public class PlayerMovement : MonoBehaviour
     void OnEnable()
     {
         moveAction?.action.Enable();
+        
+        if (interactAction != null)
+        {
+            interactAction.action.Enable();
+            interactAction.action.performed += OnInteractPressed;
+            interactAction.action.canceled += OnInteractReleased;
+            
+        }
     }
 
     void OnDisable()
     {
         moveAction?.action.Disable();
+
+        if (interactAction != null)
+        {
+            interactAction.action.performed -= OnInteractPressed;
+            interactAction.action.canceled -= OnInteractReleased;
+            interactAction.action.Disable();
+        }
+    }
+
+    void OnInteractPressed(InputAction.CallbackContext context)
+    {
+        Debug.Log("Interact Pressed");
+
+        // Pick up or interact logic here
+        
+    }
+
+    void OnInteractReleased(InputAction.CallbackContext context)
+    {
+        Debug.Log("Interact Released");
+        
     }
 
     private void HandleMovement()
@@ -45,10 +77,18 @@ public class PlayerMovement : MonoBehaviour
         HandleMovement();
     }
 
-    
-    
 
-    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Key"))
+        {
+            Debug.Log("Player in range to interact");
+        }
+    }
+
+
+
+
 
 
 }

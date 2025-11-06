@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,8 @@ public class MenuSceneScript : MonoBehaviour
         if (Input.anyKeyDown)
         {
             LoadMainScene();
+
+            return;
         }
     }
    
