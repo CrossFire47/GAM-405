@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using Unity.IO.LowLevel.Unsafe;
 using System.Collections;
-public class NewMonoBehaviourScript : MonoBehaviour
+public class CinemachineScrip : MonoBehaviour
 {
     [SerializeField] CameraControl cc;
     [SerializeField] PlayerRotate pr;
@@ -20,8 +20,5 @@ public class NewMonoBehaviourScript : MonoBehaviour
         cc.isActive = true;
         pr.isActive = true;
     }
-    void Update()
-    {
-        
-    }
+   
 }
