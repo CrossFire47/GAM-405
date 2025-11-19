@@ -83,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Key"))
         {
             Debug.Log("Player in range to interact");
+
+            
+
+
         }
     }
 
