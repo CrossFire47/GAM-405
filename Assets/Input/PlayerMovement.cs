@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Vector2 moveInput;
 
+    private KeyTrigger keyTriggerImInRangeOf;
+
     public bool isActive;
     [SerializeField] private Rigidbody rb;
     void Start()
@@ -53,7 +55,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Interact Pressed");
 
-        // Pick up or interact logic here
+        if(keyTriggerImInRangeOf != null)
+        {
+            keyTriggerImInRangeOf.key.transform.parent = hands.transform;
+            keyTriggerImInRangeOf.key.transform.localPosition = Vector3.zero;
+            Destroy(keyTriggerImInRangeOf.gameObject);
+        }
         
     }
 
@@ -80,18 +87,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Key"))
+        if (other.GetComponent<KeyTrigger>() != null)
         {
-            Debug.Log("Player in range to interact");
-
-            
-
-
+            keyTriggerImInRangeOf = other.GetComponent<KeyTrigger>();
         }
     }
 
-
-
+    void OnTriggerExit(Collider other)
+    {
+        
+        if (other.GetComponent<KeyTrigger>() != null)
+        {
+            keyTriggerImInRangeOf = null;
+        }
+    }
 
 
 
