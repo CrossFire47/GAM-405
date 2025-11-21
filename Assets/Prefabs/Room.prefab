@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5202291634035598833}
   - component: {fileID: 6305413864626087010}
   - component: {fileID: 4625593451323248486}
+  - component: {fileID: 988649221018873739}
   m_Layer: 0
   m_Name: Door W
   m_TagString: Untagged
@@ -138,10 +139,22 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &988649221018873739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983050955201811393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b5a6e33a913734a92008fbd36ab8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyDestroy
 --- !u!1 &1687417462213999971
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +654,7 @@ GameObject:
   - component: {fileID: 8996533593929028181}
   - component: {fileID: 5195236927846403854}
   - component: {fileID: 8389591095209223364}
+  - component: {fileID: 338793147458205043}
   m_Layer: 0
   m_Name: Door S
   m_TagString: Untagged
@@ -736,10 +750,22 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &338793147458205043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766488914827165195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b5a6e33a913734a92008fbd36ab8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyDestroy
 --- !u!1 &6111387991201507740
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +778,7 @@ GameObject:
   - component: {fileID: 787183268920315979}
   - component: {fileID: 8997622857935546702}
   - component: {fileID: 3545930718841934166}
+  - component: {fileID: 6279773704312048942}
   m_Layer: 0
   m_Name: Door N
   m_TagString: Untagged
@@ -847,10 +874,22 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6279773704312048942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111387991201507740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b5a6e33a913734a92008fbd36ab8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyDestroy
 --- !u!1 &7604504777283767932
 GameObject:
   m_ObjectHideFlags: 0
