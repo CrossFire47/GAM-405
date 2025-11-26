@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = moveAction != null ? moveAction.action.ReadValue<Vector2>() : Vector2.zero;
+        
     }
 
     void OnEnable()
@@ -101,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
             keyTriggerImInRangeOf = null;
         }
     }
+
 
 
 
