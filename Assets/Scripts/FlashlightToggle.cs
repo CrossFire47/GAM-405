@@ -13,7 +13,10 @@ public class FlashlightToggle : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            SetActive.
+            this.gameObject.SetActive(true);
+
+            
+
         }
     }
 }
