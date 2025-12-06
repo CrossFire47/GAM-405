@@ -1,30 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class PasswordScrip : MonoBehaviour
 {
     
-    [Header("Objects to Hide/Show")]
-    public GameObject objectToDisable;
-    public GameObject objectToDisable2;
-    
-    public GameObject objectToEnable;
 
     [Header("Password Settings")]
     public string correctPassword = "8329561";
     public string input;
-    public Text displayText;
+    public TMP_Text displayText;
 
     private bool passwordScreen;
     private float btnClicked = 0;
     private float numOfGuesses;
     
-
+    public GameObject passInputUI;
 
     void Start()
     {
         btnClicked = 0;
         numOfGuesses = correctPassword.Length;
-        displayText.SetActive(false);
+        
     }
 
     
@@ -37,6 +33,7 @@ public class PasswordScrip : MonoBehaviour
                 Debug.Log("Correct Password!");
                 input = "";
                 btnClicked = 0;
+
             }
             else
             {
@@ -44,33 +41,26 @@ public class PasswordScrip : MonoBehaviour
                 displayText.text = input.ToString();
                 btnClicked = 0;
             }
-        }  
+        } 
             
     }
 
-    void OnTriggerEnter(Collider other)
+    public void One()
     {
-        if (gameObject.CompareTag("Player"))
-        {
-            passwordScreen = true;
-
-            if (passwordScreen)
-            {
-                objectToDisable.SetActive(false);
-                objectToDisable2.SetActive(false);
-                objectToEnable.SetActive(true);
-            }
-        }
+        btnClicked = btnClicked + 1;
+        input.ToString();
+        
     }
 
+    
+   
+   
+   
     public void ValueEntered(string valueEntered)
     {
         switch (valueEntered)
         {
             case "Q": //QUIT
-                objectToDisable.SetActive(true);
-                objectToDisable2.SetActive(true);
-                objectToEnable.SetActive(false);
                 btnClicked = 0;
                 passwordScreen = false;
                 input = "";

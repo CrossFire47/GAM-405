@@ -25,7 +25,7 @@ public class PauseManager : MonoBehaviour
     {
         
         pauseMenuUI.SetActive(false);
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Quit()
