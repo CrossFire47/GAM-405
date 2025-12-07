@@ -29,7 +29,7 @@ public class MenuSceneScript : MonoBehaviour
         {
             LoadMainScene();
 
-            return;
+            this.gameObject.SetActive(false);
         }
     }
    
